@@ -9,12 +9,14 @@ function gridTemplate() {
             let symbol = '';
             if (fields[index] === 'circle') {
                 symbol = 'o';
+                grid += `<td class='o'>${symbol}</td>`;
             } else if (fields[index] === 'cross') {
                 symbol = 'x';
+                grid += `<td class='x'>${symbol}</td>`;
             } else {
-                symbol = 'Q';
+                symbol = '_';
+                grid += `<td>${symbol}</td>`;
             }
-            grid += `<td>${symbol}</td>`;
         }
         grid += '</tr>'
     }
