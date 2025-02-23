@@ -9,6 +9,18 @@ function renderGame() {
     document.getElementById('game-box').innerHTML = gridTemplate();
 }
 
+function restartGame() {
+    fields = [
+        null, null, null,
+        null, null, null,
+        null, null, null
+    ];
+
+    document.querySelector('p').innerText = 'Do your gridding best!';
+
+    renderGame();
+}
+
 function gamePlay(index) {
     if (!fields[index]) {
         fields[index] = onPlayer;

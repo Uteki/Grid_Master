@@ -22,18 +22,6 @@ td {
     background: #ffffff;
 }
 
-
-/*test*/
-.rotatedWin:before {
-    content: "";
-    width: 150px;
-    position: absolute;
-    bottom: 50px;
-    transform: rotate(45deg);
-    right: -25px;
-    border: 1px solid #607D8B;
-}
-
 td:hover {
     background: rgba(0, 0, 0, 0.05);
     transform: scale(1.03);
@@ -56,4 +44,26 @@ td.taken {
 
 .x, .o {
     animation: pop 0.2s ease-in-out;
+}
+
+.line:before {
+    content: "";
+    width: 150px;
+    background: #607D8B;
+    position: absolute;
+    bottom: 50px;
+    right: -25px;
+    border: 2px solid #607D8B;
+}
+
+.vertical:before {
+    transform: rotate(90deg);
+}
+
+.left-leaning:before {
+    transform: rotate(45deg);
+}
+
+.right-leaning:before {
+    transform: rotate(-45deg);
 }
