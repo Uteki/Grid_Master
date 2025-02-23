@@ -8,14 +8,13 @@ function gridTemplate() {
             let index = i * 3 + j;
             let symbol = '';
             if (fields[index] === 'circle') {
-                symbol = 'o';
-                grid += `<td class='o'>${symbol}</td>`;
+                symbol = 'O';
+                grid += `<td onclick="gamePlay(${index})" class='o'>${symbol}</td>`;
             } else if (fields[index] === 'cross') {
-                symbol = 'x';
-                grid += `<td class='x'>${symbol}</td>`;
+                symbol = 'X';
+                grid += `<td onclick="gamePlay(${index})" class='x'>${symbol}</td>`;
             } else {
-                symbol = '_';
-                grid += `<td>${symbol}</td>`;
+                grid += `<td onclick="gamePlay(${index})" id="cell-${index}">${symbol}</td>`;
             }
         }
         grid += '</tr>'
